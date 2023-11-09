@@ -1,13 +1,6 @@
-﻿using BusinessLogic.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BusinessLogic.ApiModels.Products
+﻿namespace BusinessLogic.Entities
 {
-    public class CreateProductModel
+    public class Product
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -21,5 +14,7 @@ namespace BusinessLogic.ApiModels.Products
         public bool IsUsed { get; set; }
         public string City { get; set; }
         public string? Description { get; set; }
+        public Category? Category { get; set; }
+        public ICollection<Favorite>? Favorites { get; set; }
     }
 }

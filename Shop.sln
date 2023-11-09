@@ -5,9 +5,9 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shop", "Shop\Shop.csproj", "{C3AF121D-535A-45B4-AF6D-F051B7D730B7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "..\Folders\ShopOLX\DataAccess\DataAccess.csproj", "{BE758233-5D07-4997-834C-7D87C0052269}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "..\Folders\ShopOLX\DataAccess\Infrastructure.csproj", "{BE758233-5D07-4997-834C-7D87C0052269}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic", "BusinessLogic\BusinessLogic.csproj", "{BA75E3B9-25E9-49A6-846A-E66DAD90D66B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "BusinessLogic\Core.csproj", "{BA75E3B9-25E9-49A6-846A-E66DAD90D66B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

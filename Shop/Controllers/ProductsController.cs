@@ -1,7 +1,8 @@
 ﻿using BusinessLogic.ApiModels.Products;
 using BusinessLogic.Interfaces;
 using DataAccess.Data;
-using DataAccess.Data.Entities;
+using BusinessLogic.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,10 +19,11 @@ namespace Shop.Controllers
             this.service = service;
         }
 
+        [Authorize]
         [HttpGet("all")]
         public IActionResult Get()
         {
-            return Ok(service.Get()); // status: 200
+            return Ok(service.Get());
         }
 
         [HttpGet("{id}")]
@@ -50,11 +52,18 @@ namespace Shop.Controllers
             return Ok();
         }
 
+        [Authorize]
         [HttpDelete]
         public IActionResult Delete(int id)
         {
-            service.Delete(id);
-
+            try
+            {
+                service.Delete(id);
+            }
+            catch (Exception)
+            {
+                return NotFound();
+            }
             return Ok();
         }
     }
